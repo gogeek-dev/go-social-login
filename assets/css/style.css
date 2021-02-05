@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+    font-size: 14px;
+    color: #000; 
+    margin: 0;
+    background: #fff;
+}
+a {
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -ms-transition: all .4s;
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+img {
+    max-width: 100%;
+    width: auto;
+    vertical-align: middle;
+}
+div,ul,li,header,nav,section,span,article,h1,h2,h3,h4,h5,h6,p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.text-center {
+	text-align: center;
+}
+/*Ripple Effects*/
+.ripple {
+position: relative;
+overflow: hidden;
+transform: translate3d(0, 0, 0)
+}
+
+.ripple:after {
+content: "";
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+pointer-events: none;
+background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+background-repeat: no-repeat;
+background-position: 50%;
+transform: scale(10, 10);
+opacity: 0;
+transition: transform .5s, opacity 1s
+}
+
+.ripple:active:after {
+transform: scale(0, 0);
+opacity: .2;
+transition: 0s
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background: #fff;
+  background-image: none;
+  border-radius: 2px;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 320px;
+  height: 58px;
+  line-height: 4;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 2px;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  border: solid thin #dfdfdf;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+  color: rgba(0, 0, 0, 0.54);
+}
+/* Transition */
+.select:hover::after {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0,0,0,0.54);
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: rgba(0,0,0,0.54);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.chk-group {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.chk-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.chk-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.chk-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.chk-group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #0079bf;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+
+.social-wrapper {
+  justify-content: space-between;
+  height: 100vh;
+}
+.socail-left {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e9fffe;
+  width: 50%;
+}
+.socail-right {
+  width: 50%;
+  padding: 40px;
+}
+.socail-right h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 45px;
+}
+.social-btns {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.social-btns a {
+  border-radius: 6px;
+  border: solid 1px #707070;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 24px;
+}
+.social-btns a.google {
+  color: #000;
+  background: #fff;
+  border: solid 1px #707070;
+}
+.social-btns a.fb {
+  background: #3c5a99;
+  border: solid 0px #3c5a99;
+}
+.social-btns a.tw {
+  background: #33ccff;
+  border: solid 0px #33ccff;
+}
+.social-btns a.in {
+  background: #007ab9;
+  border: solid 0px #007ab9;
+}
+.social-btns a.dr {
+  background: #f23f7e;
+  border: solid 0px #f23f7e;
+}
+.social-btns a.insta {
+  background: #3897f0;
+  border: solid 0px #3897f0;
+}
+.social-btns a.be {
+  background: #1473e6;
+  border: solid 0px #1473e6;
+}
+.social-btns a.pin {
+  background: #ff0000;
+  border: solid 0px #ff0000;
+}
+
+@media (max-width: 768.2px) {
+  
+  .socail-left {
+    display: none;
+  }
+
+  .socail-right {
+    width: 100%;
+  }
+
+}

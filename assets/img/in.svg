@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Group_154" data-name="Group 154" transform="translate(-861 -321)">
+        <g id="prefix__Group_153" data-name="Group 153" transform="translate(-138.7 -90.2)">
+            <g id="prefix__Group_46" data-name="Group 46" transform="translate(999.974 417.021)">
+                <path id="prefix__Path_28" d="M165.05 294.784v6.985a.324.324 0 01-.342.342h-3.63a.324.324 0 01-.342-.342v-6.506c0-1.712-.616-2.876-2.123-2.876a2.4 2.4 0 00-2.328 2.6v6.78a.324.324 0 01-.342.342h-3.63a.324.324 0 01-.342-.342c0-1.712.068-10.067 0-12.053a.324.324 0 01.342-.342h3.561a.324.324 0 01.342.342v1.575-.068a4.171 4.171 0 013.835-2.123c2.945 0 5 1.781 5 5.684zm-19.107 7.259h3.63a.324.324 0 00.342-.342v-11.985a.324.324 0 00-.342-.342h-3.63a.324.324 0 00-.342.342v12.054a.313.313 0 00.341.274z" class="prefix__cls-1" data-name="Path 28" transform="translate(-145.6 -289.1)"/>
+            </g>
+            <circle id="prefix__Ellipse_1" cx="2.26" cy="2.26" r="2.26" class="prefix__cls-1" data-name="Ellipse 1" transform="translate(999.7 411.2)"/>
+        </g>
+        <path id="prefix__Rectangle_7" d="M0 0H20V20H0z" data-name="Rectangle 7" transform="translate(861 321)" style="fill:none"/>
+    </g>
+</svg>
